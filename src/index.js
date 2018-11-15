@@ -4,10 +4,13 @@ import './index.scss';
 import firebase from 'firebase/app';
 
 import apiKeys from '../db/apiKeys.json';
+
 import createNavBar from './components/Navbar/navbar';
+import loginButton from './components/Auth/auth';
 
 const initializeApp = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   createNavBar();
+  loginButton();
 };
 initializeApp();
