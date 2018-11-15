@@ -5,7 +5,7 @@ import 'firebase/auth';
 
 const navBarEvents = () => {
   $('.nav-link').on('click', (e) => {
-    console.log(e.target.id === 'navbar-button-auth');
+    if (e.target.id === 'navbar-button-logout')
   });
 };
 navBarEvents();
@@ -23,7 +23,7 @@ const createNavBar = () => {
         <a id="navbar-button-auth" class="nav-link">Authentication</a>
       </li>
       <li class="nav-item">
-        <a id="navbar-button-auth" class="nav-link">Logout</a>
+        <a id="navbar-button-logout" class="nav-link">Logout</a>
       </li>
     </ul>
   </div>
