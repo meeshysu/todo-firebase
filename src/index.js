@@ -8,11 +8,13 @@ import apiKeys from '../db/apiKeys.json';
 import createNavBar from './components/Navbar/navbar';
 import loginButton from './components/Auth/auth';
 import checkLoginStatus from './helpers/authHelpers';
+import getAllTasksFromDb from './helpers/dataGetter';
 
 const initializeApp = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   createNavBar();
   checkLoginStatus();
   loginButton();
+  getAllTasksFromDb();
 };
 initializeApp();

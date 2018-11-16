@@ -1,13 +1,23 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-// import $ from 'jquery';
+import $ from 'jquery';
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log('user exists');
+      $('#lists').show();
+      $('#auth').hide();
+      $('#navbar-button-auth').hide();
+      $('#navbar-button-lists').show();
+      $('#navbar-button-logout').show();
+      // console.log('user exists');
     } else {
-      console.log('no user exists for now');
+      $('#lists').hide();
+      $('#auth').show();
+      $('#navbar-button-auth').show();
+      $('#navbar-button-logout').hide();
+      $('#navbar-button-lists').hide();
+      // console.log('no user exists for now');
     }
   });
 };
