@@ -1,24 +1,27 @@
 {
-  "tasks": {
     "task1": {
+      "taskId": 1,
       "task": "Laundry",
       "isCompleted": true
     },
     "task2": {
+      "taskId": 2,
       "task": "Feed the Dogs",
       "isCompleted": true
     },
     "task3": {
+      "taskId": 3,
       "task": "Clean the Bathroom",
       "isCompleted": false
     },
     "task4": {
+      "taskId": 4,
       "task": "Load the Dishwasher",
       "isCompleted": false
     },
     "task5": {
-    "task": "Brush the Cat",
-    "isCompleted": true
+      "taskId": 5,
+      "task": "Brush the Cat",
+      "isCompleted": true
   }
-}
 }
