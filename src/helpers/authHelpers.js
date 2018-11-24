@@ -10,6 +10,7 @@ const checkLoginStatus = () => {
       $('#navbar-button-auth').hide();
       $('#navbar-button-lists').show();
       $('#navbar-button-logout').show();
+      // initializeListPage();
       // console.log('user exists');
     } else {
       $('#lists').hide();
@@ -21,5 +22,6 @@ const checkLoginStatus = () => {
     }
   });
 };
+
 
 export default checkLoginStatus;
