@@ -5,7 +5,7 @@ import createNavBar from './components/Navbar/navbar';
 import loginButton from './components/Auth/auth';
 import checkLoginStatus from './helpers/authHelpers';
 import initializeListsPage from './components/ListsPage/listsPage';
-import buildTaskForm from './components/AddEditFriends/editAddFriends';
+import showAddForm from './components/AddEditFriends/editAddFriends';
 
 import 'bootstrap';
 import './index.scss';
@@ -17,6 +17,6 @@ const initializeApp = () => {
   loginButton();
   checkLoginStatus();
   initializeListsPage();
-  buildTaskForm();
+  showAddForm();
 };
 initializeApp();
