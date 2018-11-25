@@ -3,6 +3,8 @@ import './listsPage.scss';
 // import axios from 'axios';
 // import apiKeys from '../../../db/apiKeys.json';
 import dataGetter from '../../helpers/dataGetter';
+import trashImage from './TrashIcon.png';
+import editImage from './EditIcon.jpg';
 
 
 // const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
@@ -14,8 +16,12 @@ const printTasks = (allTasksArray) => {
       <div class="cardTitle">Tasks</div>
         <div class="cardContent">
           <p class="tasks">${task.task}</p>
-          <button class="btn btn-danger delete-btn" data-delete-id=${task.id}>X</button>
-          <button class="btn btn-danger edit-btn" data-edit-id=${task.id}>Edit</button>
+          <button class="btn btn-light delete-btn" data-edit-id=${task.id}>
+            <img class="image" src="${trashImage}"/>
+          </button>
+          <button class="btn btn-light edit-btn" data-edit-id=${task.id}>
+            <img class="image" src="${editImage}"/>
+          </button>
         </div>
         `;
     $('#lists').html(domString);
