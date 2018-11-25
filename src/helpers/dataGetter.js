@@ -22,9 +22,28 @@ const getAllTasksFromDb = () => new Promise((resolve, reject) => {
     });
 });
 
+const getSingleTask = taskId => new Promise((resolve, reject) => {
+  axios.get(`${firebaseUrl}/tasks.json`)
+    .then((result) => {
+      const singleTask = result.data;
+      singleTask.id = taskId;
+      resolve(singleTask);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
 const deleteTask = taskId => axios.delete(`${firebaseUrl}/tasks/${taskId}.json`);
+
+const addNewTask = taskObject => axios.post(`${firebaseUrl}/tasks.json`, JSON.stringify(taskObject));
+
+const updateTask = (taskObject, taskId) => axios.put(`${firebaseUrl}/tasks/${taskId}.json`, JSON.stringify(taskObject));
 
 export default {
   getAllTasksFromDb,
+  getSingleTask,
   deleteTask,
+  addNewTask,
+  updateTask,
 };

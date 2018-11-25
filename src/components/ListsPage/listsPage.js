@@ -15,6 +15,7 @@ const printTasks = (allTasksArray) => {
         <div class="cardContent">
           <p class="tasks">${task.task}</p>
           <button class="btn btn-danger delete-btn" data-delete-id=${task.id}>X</button>
+          <button class="btn btn-danger edit-btn" data-edit-id=${task.id}>Edit</button>
         </div>
         `;
     $('#lists').html(domString);
