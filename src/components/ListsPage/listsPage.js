@@ -32,9 +32,7 @@ const taskListPage = () => {
 };
 
 const deleteTask = (e) => {
-  console.log(e.target);
   const idToDelete = e.target.dataset.deleteId;
-  console.log(idToDelete);
   dataGetter.deleteTask(idToDelete)
     .then(() => {
       taskListPage();
