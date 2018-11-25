@@ -1,12 +1,12 @@
 import $ from 'jquery';
-import getAllTasksFromDb from '../../helpers/dataGetter';
+import tasksData from '../../helpers/dataGetter';
 import initializeListsPage from '../ListsPage/listsPage';
 
-const formBuilder = (task) => {
+const formBuilder = () => {
   const form = `
   <div class="form-group">
     <label for="form-task-name">Task Name:</label>
-    <input type="text" class="form-control" value="${task.task}" id="form-task-name" placeholder="Wash the dogs">
+    <input type="text" class="form-control" id="form-task-name" placeholder="Wash the dogs">
   </div>
   `;
   return form;
@@ -15,24 +15,22 @@ const formBuilder = (task) => {
 const gettingTaskFromForm = () => {
   const task = {
     task: $('#form-task-name').val(),
+    isCompleted: false,
   };
   return task;
 };
 
 const buildTaskForm = () => {
-  const emptyTask = {
-    task: '',
-  };
   let domString = '<h2>Add New Task</h2>';
-  domString += formBuilder(emptyTask);
+  domString += formBuilder();
   domString += '<button id="add-task" class="btn btn-success">Save New Task</button>';
   $('#add-edit-task').html(domString).show();
-  // $('#lists').hide();
+  $('#lists').hide();
 };
 
 const addNewTask = () => {
   const newTask = gettingTaskFromForm();
-  getAllTasksFromDb.addNewTask(newTask)
+  tasksData.addNewTask(newTask)
     .then(() => {
       $('#add-edit-task').html('').hide();
       $('#lists').show();
