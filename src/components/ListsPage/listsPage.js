@@ -3,6 +3,8 @@ import './listsPage.scss';
 // import axios from 'axios';
 // import apiKeys from '../../../db/apiKeys.json';
 import dataGetter from '../../helpers/dataGetter';
+import trashImage from './TrashIcon.png';
+import editImage from './EditIcon.jpg';
 
 
 // const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
@@ -10,12 +12,15 @@ import dataGetter from '../../helpers/dataGetter';
 const printTasks = (allTasksArray) => {
   let domString = '';
   allTasksArray.forEach((task) => {
-    domString += `
-      <div class="cardTitle">Tasks</div>
-        <div class="cardContent">
-          <p class="tasks">${task.task}</p>
-          <button class="btn btn-danger delete-btn" data-delete-id=${task.id}>X</button>
-          <button class="btn btn-danger edit-btn" data-edit-id=${task.id}>Edit</button>
+    domString += `<div>
+        <label for="toggle-1" class="taskChecked">
+        <input type="checkbox" class="task" id="toggle-1"></input>
+          <p class="task">Check if finished</p>
+          <p class="task">${task.task}<br>
+          <input class="delete-btn task" data-delete-id=${task.id} type="image" src="${trashImage}"></input>
+          <input class="edit-btn task" data-edit-id=${task.id} type="image" src="${editImage}"></input>
+          </p>
+        </label>
         </div>
         `;
     $('#lists').html(domString);
@@ -52,4 +57,4 @@ const initializeListsPage = () => {
   bindEvents();
 };
 
-export default initializeListsPage;
+export default { initializeListsPage };

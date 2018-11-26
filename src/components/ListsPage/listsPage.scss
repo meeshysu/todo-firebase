@@ -3,3 +3,35 @@
 .cardContent {
   margin-bottom: 2%;
 }
+
+.delete-btn {
+  background-color: white;
+  width: 30px;
+  height: 28px;
+}
+
+.edit-btn {
+  background-color: white;
+  width: 27px;
+  height: 28px;
+  padding-bottom: 1px;
+}
+
+input[type=checkbox]:checked {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ .task {
+  position: relative;
+  left: 325.5%;
+  text-decoration: line-through;
+  line-height: 1.6;
+}
+
+#completed {
+  margin-left: 20%;
+}
+
+.taskChecked {
+  margin-right: 40%;
+}
