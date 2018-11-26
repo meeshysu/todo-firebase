@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './editAddTask.scss';
 import tasksData from '../../helpers/dataGetter';
 import initializeListsPage from '../ListsPage/listsPage';
 
@@ -29,7 +30,7 @@ const buildTaskForm = () => {
   domString += '<button id="add-task" class="btn btn-success">Save New Task</button>';
   $('#add-edit-task').html(domString).show();
   $('#lists').hide();
-  // $('#show-task-form').hide();
+  $('#show-task-form').hide();
 };
 
 const addNewTask = () => {

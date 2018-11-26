@@ -4,7 +4,32 @@
   margin-bottom: 2%;
 }
 
-.image {
+.delete-btn {
+  background-color: white;
   width: 30px;
   height: 27px;
+}
+
+.edit-btn {
+  background-color: white;
+  width: 27px;
+  height: 28px;
+  padding-bottom: 1px;
+}
+
+input[type=checkbox]:checked {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ .task {
+ margin-right: -750%;
+ text-decoration: line-through;
+}
+
+#completed {
+  margin-left: 40%;
+}
+
+.taskChecked {
+  margin-right: 40%;
 }

@@ -16,7 +16,7 @@ const initializeApp = () => {
   createNavBar();
   loginButton();
   checkLoginStatus();
-  initializeListsPage();
+  initializeListsPage.initializeListsPage();
   $('#show-task-form').on('click', showAddForm);
 };
 initializeApp();
