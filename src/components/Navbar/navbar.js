@@ -9,6 +9,8 @@ const navBarEvents = () => {
       firebase.auth().signOut().then(() => {
         $('#auth').show();
         $('#lists').hide();
+        $('#show-task-form').hide();
+        $('#completed').hide();
       })
         .catch((error) => {
           console.error('you are still logged in', error);
@@ -16,8 +18,9 @@ const navBarEvents = () => {
     } else if (e.target.id === 'navbar-button-lists') {
       $('#auth').hide();
       $('#lists').show();
+      $('#show-task-form').show();
+      $('#completed').show();
     } else {
-      console.log(e.target.id);
       $('#auth').show();
       $('#lists').hide();
     }

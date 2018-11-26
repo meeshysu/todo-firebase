@@ -15,6 +15,7 @@ const printTasks = (allTasksArray) => {
     domString += `<div>
         <label for="toggle-1" class="taskChecked">
         <input type="checkbox" class="task" id="toggle-1"></input>
+          <p class="task">Check if finished</p>
           <p class="task">${task.task}<br>
           <input class="delete-btn task" data-delete-id=${task.id} type="image" src="${trashImage}"></input>
           <input class="edit-btn task" data-edit-id=${task.id} type="image" src="${editImage}"></input>
@@ -47,14 +48,6 @@ const deleteTask = (e) => {
     });
 };
 
-// const checkedBox = () => {
-//   $('.task').on('click', () => {
-//     if ($(this).is(':checked')) {
-//       $('#taskContainer').append('#completed');
-//     }
-//   });
-// };
-
 const bindEvents = () => {
   $('body').on('click', '.delete-btn', deleteTask);
 };
@@ -62,15 +55,6 @@ const bindEvents = () => {
 const initializeListsPage = () => {
   taskListPage();
   bindEvents();
-  // checkedBox();
 };
 
 export default { initializeListsPage };
-
-// const gettingSingleTask = (isFinished, taskToUpdate) => {
-//   const task = {
-//     task: $(taskToUpdate).text(),
-//     isCompleted: isFinished,
-//   };
-//   return task;
-// };
