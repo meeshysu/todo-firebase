@@ -17,21 +17,21 @@
   padding-bottom: 1px;
 }
 
-input[type=checkbox]:checked {
-  display: none;
-}
+// input[type=checkbox]:checked {
+//   display: none;
+// }
 
-input[type=checkbox]:checked ~ .task {
-  position: relative;
-  left: 325.5%;
-  text-decoration: line-through;
-  line-height: 1.6;
-}
+// input[type=checkbox]:checked ~ .task {
+//   position: relative;
+//   left: 325.5%;
+//   text-decoration: line-through;
+//   line-height: 1.6;
+// }
 
 #completed {
-  margin-left: 20%;
+  margin-left: 40%;
 }
 
-.taskChecked {
-  margin-right: 40%;
-}
+// .taskChecked {
+//   margin-right: 40%;
+// }
