@@ -80,6 +80,7 @@ const updateTask = (e) => {
     });
 };
 
+
 $('body').on('click', '#add-task', addNewTask);
 $('body').on('click', '.edit-btn', showEditForm);
 $('body').on('click', '#edit-task', updateTask);

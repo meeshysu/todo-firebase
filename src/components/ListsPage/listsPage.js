@@ -11,7 +11,7 @@ import editImage from './EditIcon.jpg';
 
 const printTasks = (allTasksArray) => {
   let domString = '';
-  console.log(allTasksArray);
+  // console.log(allTasksArray);
   allTasksArray.forEach((task) => {
     domString += `<div>
         <label for="toggle-1" class="taskChecked">
@@ -39,7 +39,7 @@ const printCompletedTasks = (completed) => {
     domString += `
     <div class="form-check form-check-inline">
     <p class="task">${task.task}
-      <input class="delete-btn task" data-delete-complete-id=${task.id} type="image" src="${trashImage}"></input>
+      <input class="delete-btn task" data-delete-id=${task.id} type="image" src="${trashImage}"></input>
       </p>
     </div>
     `;
