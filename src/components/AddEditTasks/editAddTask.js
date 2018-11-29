@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import './editAddTask.scss';
 import tasksData from '../../helpers/dataGetter';
-import initializeListsPage from '../ListsPage/listsPage';
+import listsPage from '../ListsPage/listsPage';
 
 const formBuilder = (task) => {
   const form = `
@@ -34,19 +34,29 @@ const buildTaskForm = () => {
   $('#completed').hide();
 };
 
+// ADD A NEW TASK
 const addNewTask = () => {
   const newTask = gettingTaskFromForm();
+  console.log(newTask);
   tasksData.addNewTask(newTask)
     .then(() => {
       $('#add-edit-task').html('').hide();
       $('#lists').show();
-      initializeListsPage();
+      listsPage.initializeListsPage();
     })
     .catch((error) => {
       console.error('error', error);
     });
 };
 
+$('body').on('keyup', '#form-task-name', (event) => {
+  if (event.keyCode === 13) {
+    addNewTask();
+    // $('#add-task').click();
+  }
+});
+
+// EDIT & UPDATE THE TASK
 const showEditForm = (e) => {
   const idToEdit = e.target.dataset.editId; // camel case data-single-edit-id
   tasksData.getSingleTask(idToEdit)
@@ -73,14 +83,21 @@ const updateTask = (e) => {
       $('#add-edit-task').html('').hide();
       $('#single-container').html('');
       $('#lists').show();
-      initializeListsPage();
+      listsPage.initializeListsPage();
     })
     .catch((error) => {
       console.error('error in updating tasks', error);
     });
 };
 
+$('body').on('keyup', '#add-edit-task', (event) => {
+  if (event.keyCode === 13) {
+    $('#add-edit-task').click();
+  }
+});
 
+
+// CLICK EVENTS
 $('body').on('click', '#add-task', addNewTask);
 $('body').on('click', '.edit-btn', showEditForm);
 $('body').on('click', '#edit-task', updateTask);
