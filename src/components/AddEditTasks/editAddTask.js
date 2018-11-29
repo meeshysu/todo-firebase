@@ -92,7 +92,8 @@ const updateTask = (e) => {
 
 $('body').on('keyup', '#add-edit-task', (event) => {
   if (event.keyCode === 13) {
-    $('#add-edit-task').click();
+    updateTask();
+    // $('#add-edit-task').click();
   }
 });
 
