@@ -81,7 +81,7 @@ const updateTask = (e) => {
   tasksData.updateTask(updatedTask, taskId)
     .then(() => {
       $('#add-edit-task').html('').hide();
-      $('#single-container').html('');
+      // $('#single-container').html('');
       $('#lists').show();
       listsPage.initializeListsPage();
     })
@@ -90,9 +90,11 @@ const updateTask = (e) => {
     });
 };
 
-$('body').on('keyup', '#add-edit-task', (event) => {
+
+$('body').on('keyup', '#form-task-name', (event) => {
   if (event.keyCode === 13) {
-    updateTask();
+    updateTask(); // pass in maybe a button to call it instead?
+    // or another attribute into the input field
     // $('#add-edit-task').click();
   }
 });
