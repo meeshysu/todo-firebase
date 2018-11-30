@@ -95,6 +95,7 @@ $('body').on('keyup', '#form-task-name', (event) => {
   if (event.keyCode === 13) {
     updateTask(); // pass in maybe a button to call it instead?
     // or another attribute into the input field
+    // attribute
     // $('#add-edit-task').click();
   }
 });
