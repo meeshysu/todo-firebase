@@ -1,7 +1,4 @@
-@mixin text-shadow($x: 2px, $y: 1px, $blur: 1px, $color: rgba(253, 251, 251, 0.4)) {
-  text-shadow: $x $y $blur $color;
-}
-
+// import $ from 'jquery';
 
 .cardContent {
   margin-bottom: 2%;
@@ -20,33 +17,21 @@
   padding-bottom: 1px;
 }
 
-#lists-title {
-  @include text-shadow;
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  margin-bottom: 1%;
-  // margin-left: 15%;
-}
+// input[type=checkbox]:checked {
+//   display: none;
+// }
 
-#lists {
-  background-color: cornsilk;
-  padding: 5%;
-  border-radius: 15px;
-  margin-bottom: 7%;
-}
-
-#completed-title {
-  @include text-shadow;
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-}
+// input[type=checkbox]:checked ~ .task {
+//   position: relative;
+//   left: 325.5%;
+//   text-decoration: line-through;
+//   line-height: 1.6;
+// }
 
 #completed {
-  text-decoration-line: line-through;
-  background-color: cornsilk;
-  padding: 5%;
-  border-radius: 15px;
-  text-align: center;
-  margin-top: 1%;
-  margin-bottom: 10%;
+  margin-left: 40%;
 }
+
+// .taskChecked {
+//   margin-right: 40%;
+// }
