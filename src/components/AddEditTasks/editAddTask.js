@@ -27,12 +27,9 @@ const buildTaskForm = () => {
   };
   let domString = '<h2>Add New Task</h2>';
   domString += formBuilder(emptyTask);
-  domString += '<button id="add-task" class="btn">Save New Task</button>';
+  domString += '<button id="add-task" class="btn btn-info">Save New Task</button>';
   $('#add-edit-task').html(domString).show();
   $('#lists').hide();
-  $('#lists-title').hide();
-  $('#completed-title').hide();
-  $('#title').hide();
   $('#show-task-form').hide();
   $('#completed').hide();
 };
@@ -66,15 +63,11 @@ const showEditForm = (e) => {
     .then((singleTask) => {
       let domString = '<h2>Edit You Task:</h2>';
       domString += formBuilder(singleTask);
-      domString += `<button id="edit-task" data-single-edit-id=${singleTask.id} class="btn">Save Task</button>`;
+      domString += `<button id="edit-task" data-single-edit-id=${singleTask.id} class="btn btn-info">Save Task</button>`;
       $('#add-edit-task').html(domString).show();
       $('#tasks').hide();
       $('#show-task-form').hide();
       $('#lists').hide();
-      $('#completed').hide();
-      $('#lists-title').hide();
-      $('#completed-title').hide();
-      $('#title').hide();
       $('#completed').hide();
     })
     .catch((error) => {
@@ -88,7 +81,7 @@ const updateTask = (e) => {
   tasksData.updateTask(updatedTask, taskId)
     .then(() => {
       $('#add-edit-task').html('').hide();
-      // $('#single-container').html('');
+      $('#single-container').html('');
       $('#lists').show();
       listsPage.initializeListsPage();
     })
@@ -97,12 +90,9 @@ const updateTask = (e) => {
     });
 };
 
-
-$('body').on('keyup', '#form-task-name', (event) => {
+$('body').on('keyup', '#add-edit-task', (event) => {
   if (event.keyCode === 13) {
-    updateTask(); // pass in maybe a button to call it instead?
-    // or another attribute into the input field
-    // attribute
+    updateTask();
     // $('#add-edit-task').click();
   }
 });
