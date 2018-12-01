@@ -1,4 +1,26 @@
+.form-group {
+  font-family: 'Dancing Script', cursive;
+}
+
 .form-control {
   max-width: 40%;
   margin: auto;
+}
+
+#container-to-tasks {
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  max-width: 60%;
+  display: block;
+
+  position: relative;
+  margin: auto;
+  // margin-left: 20%;
+  // padding: 10%;
+}
+
+#add-task, #edit-task {
+  margin: auto;
+  font-family: 'Dancing Script', cursive;
 }

@@ -3,8 +3,8 @@ import './listsPage.scss';
 // import axios from 'axios';
 // import apiKeys from '../../../db/apiKeys.json';
 import dataGetter from '../../helpers/dataGetter';
-import trashImage from './TrashIcon.png';
-import editImage from './EditIcon.jpg';
+import trashImage from './trash.png';
+import editImage from './pen.png';
 
 
 // const firebaseUrl = apiKeys.firebaseKeys.databaseURL;

@@ -1,9 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: darkcyan !important;
+  background-image: url(images/CoffeeCup.jpg);
+  background-size: cover;
 }
 
 .btn {
-  margin: 4%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+#title {
+  // background-image: url(images/Sunlight.png);
+  // background-size: contain;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  padding: auto;
+  font-size: 50px;
 }
