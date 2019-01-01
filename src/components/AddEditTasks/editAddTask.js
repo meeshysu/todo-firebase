@@ -30,8 +30,11 @@ const buildTaskForm = () => {
   domString += '<button id="add-task" class="btn btn-info">Save New Task</button>';
   $('#add-edit-task').html(domString).show();
   $('#lists').hide();
+  $('#title').hide();
+  $('#completed-title').hide();
   $('#show-task-form').hide();
   $('#completed').hide();
+  $('#lists-title').hide();
 };
 
 // ADD A NEW TASK
@@ -66,7 +69,10 @@ const showEditForm = (e) => {
       domString += `<button id="edit-task" data-single-edit-id=${singleTask.id} class="btn btn-info">Save Task</button>`;
       $('#add-edit-task').html(domString).show();
       $('#tasks').hide();
+      $('#title').hide();
       $('#show-task-form').hide();
+      $('#completed-title').hide();
+      $('#lists-title').hide();
       $('#lists').hide();
       $('#completed').hide();
     })

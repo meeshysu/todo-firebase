@@ -7,6 +7,10 @@ const checkLoginStatus = () => {
     if (user) {
       $('#lists').show();
       $('#auth').hide();
+      $('#show-task-form').show();
+      $('#completed-title').show();
+      $('#completed-title').show();
+      $('#add-edit-task').show();
       $('#navbar-button-auth').hide();
       $('#navbar-button-lists').show();
       $('#navbar-button-logout').show();
@@ -15,6 +19,13 @@ const checkLoginStatus = () => {
     } else {
       $('#lists').hide();
       $('#auth').show();
+      $('#title').hide();
+      $('#completed').hide();
+      $('#completed-title').hide();
+      $('#lists-title').hide();
+      $('#show-task-form').hide();
+      $('#add-edit-task').hide();
+      $('#single-container').hide();
       $('#navbar-button-auth').show();
       $('#navbar-button-logout').hide();
       $('#navbar-button-lists').hide();
