@@ -8,6 +8,8 @@ const checkLoginStatus = () => {
       $('#lists').show();
       $('#auth').hide();
       $('#show-task-form').show();
+      $('#completed-title').show();
+      $('#completed-title').show();
       $('#add-edit-task').show();
       $('#navbar-button-auth').hide();
       $('#navbar-button-lists').show();
