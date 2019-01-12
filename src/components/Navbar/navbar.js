@@ -41,9 +41,6 @@ const createNavBar = () => {
         <a id="navbar-button-auth" class="nav-link">Authentication</a>
       </li>
       <li class="nav-item">
-        <a id="navbar-button-lists" class="nav-link">List</a>
-      </li>
-      <li class="nav-item">
         <a id="navbar-button-logout" class="nav-link">Logout</a>
       </li>
     </ul>
