@@ -2,7 +2,10 @@
 In this particular website project, you have a task list of chores that need to be finished. Upon the homepage, you are asked to sign in with your google email. Once you have, you will see your list of chores appear. There you will be able to add a new task, edit a task or delete one. You can also move a task to the completed list if you have finished it. 
 
 ## Screenshots
-![main_screenshot](HomePage.png)
+![auth](images/ToDoAuth.png)
+![todo](images/ToDo.png)
+![newtask](images/NewTask.png)
+![edittask](images/EditPage.png)
 
 ## Technologies Used 
 - SASS/CSS
