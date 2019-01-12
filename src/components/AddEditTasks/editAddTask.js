@@ -32,7 +32,7 @@ const buildTaskForm = () => {
   $('#lists').show();
   $('#title').show();
   $('#completed-title').show();
-  $('#show-task-form').hide();
+  $('#show-task-form').show();
   $('#completed').show();
   $('#lists-title').show();
 };
@@ -73,13 +73,13 @@ const showEditForm = (e) => {
       domString += formBuilder(singleTask);
       domString += `<button id="edit-task" data-single-edit-id=${singleTask.id} class="btn btn-info">Save Task</button>`;
       $('#add-edit-task').html(domString).show();
-      $('#tasks').hide();
-      $('#title').hide();
-      $('#show-task-form').hide();
-      $('#completed-title').hide();
-      $('#lists-title').hide();
-      $('#lists').hide();
-      $('#completed').hide();
+      $('#tasks').show();
+      $('#title').show();
+      $('#show-task-form').show();
+      $('#completed-title').show();
+      $('#lists-title').show();
+      $('#lists').show();
+      $('#completed').show();
     })
     .catch((error) => {
       console.error('error in getting single task for edit', error);
@@ -93,7 +93,13 @@ const updateTask = (e) => {
     .then(() => {
       $('#add-edit-task').html('').hide();
       $('#single-container').html('');
+      $('#tasks').show();
+      $('#title').show();
+      $('#show-task-form').show();
+      $('#completed-title').show();
+      $('#lists-title').show();
       $('#lists').show();
+      $('#completed').show();
       listsPage.initializeListsPage();
     })
     .catch((error) => {
