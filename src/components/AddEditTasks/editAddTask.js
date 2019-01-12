@@ -29,12 +29,12 @@ const buildTaskForm = () => {
   domString += formBuilder(emptyTask);
   domString += '<button id="add-task" class="btn btn-info">Save New Task</button>';
   $('#add-edit-task').html(domString).show();
-  $('#lists').hide();
-  $('#title').hide();
-  $('#completed-title').hide();
+  $('#lists').show();
+  $('#title').show();
+  $('#completed-title').show();
   $('#show-task-form').hide();
-  $('#completed').hide();
-  $('#lists-title').hide();
+  $('#completed').show();
+  $('#lists-title').show();
 };
 
 // ADD A NEW TASK
@@ -44,7 +44,13 @@ const addNewTask = () => {
   tasksData.addNewTask(newTask)
     .then(() => {
       $('#add-edit-task').html('').hide();
+      $('#tasks').show();
+      $('#title').show();
+      $('#show-task-form').show();
+      $('#completed-title').show();
+      $('#lists-title').show();
       $('#lists').show();
+      $('#completed').show();
       listsPage.initializeListsPage();
     })
     .catch((error) => {
@@ -55,7 +61,6 @@ const addNewTask = () => {
 $('body').on('keyup', '#form-task-name', (event) => {
   if (event.keyCode === 13) {
     addNewTask();
-    // $('#add-task').click();
   }
 });
 
@@ -99,7 +104,6 @@ const updateTask = (e) => {
 $('body').on('keyup', '#add-edit-task', (event) => {
   if (event.keyCode === 13) {
     updateTask();
-    // $('#add-edit-task').click();
   }
 });
 

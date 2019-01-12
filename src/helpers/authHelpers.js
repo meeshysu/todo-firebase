@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import $ from 'jquery';
+import initializeListsPage from '../components/ListsPage/listsPage';
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -14,8 +15,7 @@ const checkLoginStatus = () => {
       $('#navbar-button-auth').hide();
       $('#navbar-button-lists').show();
       $('#navbar-button-logout').show();
-      // initializeListPage();
-      // console.log('user exists');
+      initializeListsPage();
     } else {
       $('#lists').hide();
       $('#auth').show();
